@@ -1,9 +1,8 @@
 package Test;
-
+//"<" and ">"
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import Pages.UserLogin;
+import Pages.SearchAProduct;
 
 public class Launch_Application {
 	public static void main(String[] args) {
@@ -12,7 +11,8 @@ public class Launch_Application {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com/");
 		driver.manage().window().maximize();
-		UserLogin launch = new UserLogin(driver); 
-		launch.applicationLogin("9949923313");
+		SearchAProduct product = new SearchAProduct(driver);
+		product.itemSearch();
+//		product.quit();
 	}
 }

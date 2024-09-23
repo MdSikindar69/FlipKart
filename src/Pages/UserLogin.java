@@ -23,10 +23,9 @@ public class UserLogin {
 	@FindBy(xpath = "//button[contains(text(),'OTP')]")
 	WebElement requestOTP;
 
-	public void applicationLogin(String number) {
+	public void applicationLogin(String email) {
 		login.click();
-		System.out.println("Error");
-		enterUserName.sendKeys(number);
+		enterUserName.sendKeys(email);
 		requestOTP.click();
 	}
 
